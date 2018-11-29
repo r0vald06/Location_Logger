@@ -14,6 +14,11 @@
 		DA6955EB21AF8E8900FFE84A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6955E921AF8E8900FFE84A /* LaunchScreen.storyboard */; };
 		DA6955F621AF8E8900FFE84A /* Location_LoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6955F521AF8E8900FFE84A /* Location_LoggerTests.swift */; };
 		DA69560121AF8E8900FFE84A /* Location_LoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69560021AF8E8900FFE84A /* Location_LoggerUITests.swift */; };
+		DACBE2D921AFA47A0054B297 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2D821AFA47A0054B297 /* MapViewController.swift */; };
+		DACBE2DB21AFBB510054B297 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2DA21AFBB510054B297 /* NavigationBar.swift */; };
+		DACBE2DD21AFF0780054B297 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2DC21AFF0780054B297 /* ItemsViewController.swift */; };
+		DACBE2DF21AFF1210054B297 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2DE21AFF1210054B297 /* ItemStore.swift */; };
+		DACBE2E121AFF12C0054B297 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2E021AFF12C0054B297 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +52,11 @@
 		DA6955FC21AF8E8900FFE84A /* Location_LoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Location_LoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA69560021AF8E8900FFE84A /* Location_LoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_LoggerUITests.swift; sourceTree = "<group>"; };
 		DA69560221AF8E8900FFE84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DACBE2D821AFA47A0054B297 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DACBE2DA21AFBB510054B297 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		DACBE2DC21AFF0780054B297 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		DACBE2DE21AFF1210054B297 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		DACBE2E021AFF12C0054B297 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,13 @@
 		DA6955D421AF8E8700FFE84A = {
 			isa = PBXGroup;
 			children = (
+				DA6955E021AF8E8700FFE84A /* AppDelegate.swift */,
+				DACBE2D821AFA47A0054B297 /* MapViewController.swift */,
+				DA6955E221AF8E8700FFE84A /* ViewController.swift */,
+				DACBE2DC21AFF0780054B297 /* ItemsViewController.swift */,
+				DACBE2DE21AFF1210054B297 /* ItemStore.swift */,
+				DACBE2E021AFF12C0054B297 /* Item.swift */,
+				DACBE2DA21AFBB510054B297 /* NavigationBar.swift */,
 				DA6955DF21AF8E8700FFE84A /* Location_Logger */,
 				DA6955F421AF8E8900FFE84A /* Location_LoggerTests */,
 				DA6955FF21AF8E8900FFE84A /* Location_LoggerUITests */,
@@ -97,8 +114,6 @@
 		DA6955DF21AF8E8700FFE84A /* Location_Logger */ = {
 			isa = PBXGroup;
 			children = (
-				DA6955E021AF8E8700FFE84A /* AppDelegate.swift */,
-				DA6955E221AF8E8700FFE84A /* ViewController.swift */,
 				DA6955E421AF8E8700FFE84A /* Main.storyboard */,
 				DA6955E721AF8E8900FFE84A /* Assets.xcassets */,
 				DA6955E921AF8E8900FFE84A /* LaunchScreen.storyboard */,
@@ -193,13 +208,16 @@
 				TargetAttributes = {
 					DA6955DC21AF8E8700FFE84A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					DA6955F021AF8E8900FFE84A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = DA6955DC21AF8E8700FFE84A;
 					};
 					DA6955FB21AF8E8900FFE84A = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = DA6955DC21AF8E8700FFE84A;
 					};
 				};
@@ -256,8 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DACBE2DD21AFF0780054B297 /* ItemsViewController.swift in Sources */,
 				DA6955E321AF8E8700FFE84A /* ViewController.swift in Sources */,
+				DACBE2DF21AFF1210054B297 /* ItemStore.swift in Sources */,
+				DACBE2D921AFA47A0054B297 /* MapViewController.swift in Sources */,
+				DACBE2E121AFF12C0054B297 /* Item.swift in Sources */,
 				DA6955E121AF8E8700FFE84A /* AppDelegate.swift in Sources */,
+				DACBE2DB21AFBB510054B297 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +461,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.louisville.cecs.Location-Logger";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -455,7 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.louisville.cecs.Location-Logger";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -474,7 +497,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.louisville.cecs.Location-LoggerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Location_Logger.app/Location_Logger";
 			};
@@ -494,7 +517,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.louisville.cecs.Location-LoggerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Location_Logger.app/Location_Logger";
 			};
@@ -513,7 +536,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.louisville.cecs.Location-LoggerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Location_Logger;
 			};
@@ -532,7 +555,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.louisville.cecs.Location-LoggerUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = Location_Logger;
 			};
