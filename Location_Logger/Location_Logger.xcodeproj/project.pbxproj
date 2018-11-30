@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DA6955E121AF8E8700FFE84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6955E021AF8E8700FFE84A /* AppDelegate.swift */; };
-		DA6955E321AF8E8700FFE84A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6955E221AF8E8700FFE84A /* ViewController.swift */; };
 		DA6955E621AF8E8700FFE84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6955E421AF8E8700FFE84A /* Main.storyboard */; };
 		DA6955E821AF8E8900FFE84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6955E721AF8E8900FFE84A /* Assets.xcassets */; };
 		DA6955EB21AF8E8900FFE84A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6955E921AF8E8900FFE84A /* LaunchScreen.storyboard */; };
@@ -16,9 +15,9 @@
 		DA69560121AF8E8900FFE84A /* Location_LoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA69560021AF8E8900FFE84A /* Location_LoggerUITests.swift */; };
 		DACBE2D921AFA47A0054B297 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2D821AFA47A0054B297 /* MapViewController.swift */; };
 		DACBE2DB21AFBB510054B297 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2DA21AFBB510054B297 /* NavigationBar.swift */; };
-		DACBE2DD21AFF0780054B297 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2DC21AFF0780054B297 /* ItemsViewController.swift */; };
-		DACBE2DF21AFF1210054B297 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2DE21AFF1210054B297 /* ItemStore.swift */; };
-		DACBE2E121AFF12C0054B297 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2E021AFF12C0054B297 /* Item.swift */; };
+		DACBE2E921B08DAA0054B297 /* LocationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2E821B08DAA0054B297 /* LocationInfoViewController.swift */; };
+		DACBE2EB21B08F220054B297 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2EA21B08F220054B297 /* TableViewController.swift */; };
+		DACBE2ED21B0A4300054B297 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACBE2EC21B0A4300054B297 /* QuizViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +39,7 @@
 
 /* Begin PBXFileReference section */
 		DA6955DD21AF8E8700FFE84A /* Location_Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Location_Logger.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA6955E021AF8E8700FFE84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA6955E221AF8E8700FFE84A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA6955E021AF8E8700FFE84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		DA6955E521AF8E8700FFE84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA6955E721AF8E8900FFE84A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA6955EA21AF8E8900FFE84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,9 +52,9 @@
 		DA69560221AF8E8900FFE84A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DACBE2D821AFA47A0054B297 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DACBE2DA21AFBB510054B297 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
-		DACBE2DC21AFF0780054B297 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
-		DACBE2DE21AFF1210054B297 /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
-		DACBE2E021AFF12C0054B297 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DACBE2E821B08DAA0054B297 /* LocationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoViewController.swift; sourceTree = "<group>"; };
+		DACBE2EA21B08F220054B297 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		DACBE2EC21B0A4300054B297 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +85,10 @@
 		DA6955D421AF8E8700FFE84A = {
 			isa = PBXGroup;
 			children = (
-				DA6955E021AF8E8700FFE84A /* AppDelegate.swift */,
+				DACBE2EC21B0A4300054B297 /* QuizViewController.swift */,
+				DACBE2EA21B08F220054B297 /* TableViewController.swift */,
+				DACBE2E821B08DAA0054B297 /* LocationInfoViewController.swift */,
 				DACBE2D821AFA47A0054B297 /* MapViewController.swift */,
-				DA6955E221AF8E8700FFE84A /* ViewController.swift */,
-				DACBE2DC21AFF0780054B297 /* ItemsViewController.swift */,
-				DACBE2DE21AFF1210054B297 /* ItemStore.swift */,
-				DACBE2E021AFF12C0054B297 /* Item.swift */,
 				DACBE2DA21AFBB510054B297 /* NavigationBar.swift */,
 				DA6955DF21AF8E8700FFE84A /* Location_Logger */,
 				DA6955F421AF8E8900FFE84A /* Location_LoggerTests */,
@@ -115,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				DA6955E421AF8E8700FFE84A /* Main.storyboard */,
+				DA6955E021AF8E8700FFE84A /* AppDelegate.swift */,
 				DA6955E721AF8E8900FFE84A /* Assets.xcassets */,
 				DA6955E921AF8E8900FFE84A /* LaunchScreen.storyboard */,
 				DA6955EC21AF8E8900FFE84A /* Info.plist */,
@@ -274,12 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DACBE2DD21AFF0780054B297 /* ItemsViewController.swift in Sources */,
-				DA6955E321AF8E8700FFE84A /* ViewController.swift in Sources */,
-				DACBE2DF21AFF1210054B297 /* ItemStore.swift in Sources */,
+				DACBE2E921B08DAA0054B297 /* LocationInfoViewController.swift in Sources */,
 				DACBE2D921AFA47A0054B297 /* MapViewController.swift in Sources */,
-				DACBE2E121AFF12C0054B297 /* Item.swift in Sources */,
 				DA6955E121AF8E8700FFE84A /* AppDelegate.swift in Sources */,
+				DACBE2ED21B0A4300054B297 /* QuizViewController.swift in Sources */,
+				DACBE2EB21B08F220054B297 /* TableViewController.swift in Sources */,
 				DACBE2DB21AFBB510054B297 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
