@@ -22,13 +22,40 @@ class LocationInfoViewController: UIViewController, UITextViewDelegate, UITextFi
         super.viewDidLoad()
         //Do any additional setup after loading the view, typically from a nib
         self.titleTextField.delegate = self
-        print("view did load")
+        self.dateTextField.delegate = self
+        self.addressTextField.delegate = self
+        self.descriptionTextView.delegate = self
+        
         
     }
     
-    func textFieldDidEndEditing(_ titleTextField: UITextField) {
-        titleString = titleTextField.text ?? "empty"
-        titleTextField.text = titleString
+    override func viewDidAppear(_ animated: Bool) {
+        if let x = UserDefaults.standard.object(forKey: "title") as? String {
+            titleTextField.text = x
+        }
+        
+        if let x = UserDefaults.standard.object(forKey: "date") as? String {
+            dateTextField.text = x
+        }
+        
+        if let x = UserDefaults.standard.object(forKey: "address") as? String {
+            addressTextField.text = x
+        }
+        
+        if let x = UserDefaults.standard.object(forKey: "description") as? String {
+            descriptionTextView.text = x
+        }
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UserDefaults.standard.set(titleTextField.text, forKey: "title")
+        UserDefaults.standard.set(addressTextField.text, forKey: "address")
+        UserDefaults.standard.set(dateTextField.text, forKey: "date")
+        
+    }
+    
+    func textViewDidEndEditing(_ descriptionTextView: UITextView) {
+        UserDefaults.standard.set(descriptionTextView.text, forKey: "description")
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,33 +73,3 @@ class LocationInfoViewController: UIViewController, UITextViewDelegate, UITextFi
     }
 }
 
-//extension UINavigationController {
-//
-//    override open var shouldAutorotate: Bool {
-//        get {
-//            if let visibleVC = visibleViewController {
-//                return visibleVC.shouldAutorotate
-//            }
-//            return super.shouldAutorotate
-//        }
-//    }
-//
-//    override open var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-//        get {
-//            if let visibleVC = visibleViewController {
-//                return visibleVC.preferredInterfaceOrientationForPresentation
-//            }
-//            return super.preferredInterfaceOrientationForPresentation
-//        }
-//    }
-//
-//    override open var supportedInterfaceOrientations: UIInterfaceOrientationMask{
-//        get {
-//            if let visibleVC = visibleViewController {
-//                return visibleVC.supportedInterfaceOrientations
-//            }
-//            return super.supportedInterfaceOrientations
-//        }
-//    }
-//
-//}
