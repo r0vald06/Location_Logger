@@ -176,7 +176,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="aud-ST-ULW" kind="relationship" relationship="rootViewController" id="qUx-NH-t3a"/>
+                        <segue destination="aud-ST-ULW" kind="relationship" relationship="rootViewController" id="6iP-yE-3Ec"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5J-N0-lh6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -201,7 +201,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="XAi-SK-sm0" kind="show" id="88G-eT-N1K"/>
+                                    <action selector="locationButton:" destination="aud-ST-ULW" eventType="touchUpInside" id="WbZ-GO-dKI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgg-zw-8gz">
@@ -262,6 +262,7 @@
                         <outlet property="leadingViewConst" destination="8IP-Vr-Vu7" id="ywl-qu-E6c"/>
                         <outlet property="trailingViewConst" destination="iE6-Hd-kgH" id="D95-10-0Ix"/>
                         <outlet property="ubeView" destination="5k6-5j-wHq" id="fDC-IV-i2B"/>
+                        <segue destination="521-s0-sfi" kind="show" identifier="locationTable" id="fpM-6V-sWJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gp0-oJ-g52" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -269,36 +270,66 @@
             <point key="canvasLocation" x="766.66666666666674" y="588.61607142857144"/>
         </scene>
         <!--Table View Controller-->
-        <scene sceneID="sVA-dJ-rEu">
+        <scene sceneID="vDx-30-dwO">
             <objects>
-                <tableViewController id="XAi-SK-sm0" customClass="TableViewController" customModule="Location_Logger" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qaT-rF-uJ8">
+                <tableViewController storyboardIdentifier="TableViewController" id="521-s0-sfi" customClass="TableViewController" customModule="Location_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ckF-gA-Oey">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Rch-og-NkW">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6av-zR-n0A">
+                                    <rect key="frame" x="133" y="7" width="79" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Edit"/>
+                                    <connections>
+                                        <action selector="toggleEditingMode:" destination="z6K-Tg-YEW" eventType="touchUpInside" id="DL7-xe-TzO"/>
+                                        <action selector="toggleEditingMode:" destination="521-s0-sfi" eventType="touchUpInside" id="URg-Nl-kmU"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ono-18-FwR">
+                                    <rect key="frame" x="291" y="5" width="90" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <state key="normal" title="Add"/>
+                                    <connections>
+                                        <action selector="addNewItem:" destination="521-s0-sfi" eventType="touchUpInside" id="28a-Wg-qWq"/>
+                                        <action selector="addNewItem:" destination="z6K-Tg-YEW" eventType="touchUpInside" id="2v9-oE-ZyT"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="itZ-pL-hiQ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="ddz-x4-y6w">
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="itZ-pL-hiQ" id="N5A-Ur-aWp">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ddz-x4-y6w" id="ndN-kY-USm">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <accessibility key="accessibilityConfiguration" identifier="cell"/>
+                                <accessibility key="accessibilityConfiguration" identifier="UITableViewCell">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <segue destination="nb3-Gl-Ptz" kind="show" identifier="locationInfo" id="bLp-bk-4c4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="XAi-SK-sm0" id="Nxw-X7-t1w"/>
-                            <outlet property="delegate" destination="XAi-SK-sm0" id="4nI-PN-S7f"/>
+                            <outlet property="dataSource" destination="521-s0-sfi" id="9EF-bb-QVm"/>
+                            <outlet property="delegate" destination="521-s0-sfi" id="9pM-VT-0iT"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <segue destination="nb3-Gl-Ptz" kind="show" identifier="locationInfo" id="EF0-n5-NPe"/>
-                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1PX-nI-h4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VLn-Me-MW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="z6K-Tg-YEW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="589"/>
+            <point key="canvasLocation" x="1724.6376811594205" y="588.61607142857144"/>
         </scene>
     </scenes>
     <resources>

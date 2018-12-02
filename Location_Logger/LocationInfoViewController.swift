@@ -26,6 +26,21 @@ class LocationInfoViewController: UIViewController, UITextViewDelegate, UITextFi
         self.addressTextField.delegate = self
         self.descriptionTextView.delegate = self
         
+        if let x = UserDefaults.standard.object(forKey: "title") as? String {
+            titleTextField.text = x
+        }
+        
+        if let x = UserDefaults.standard.object(forKey: "date") as? String {
+            dateTextField.text = x
+        }
+        
+        if let x = UserDefaults.standard.object(forKey: "address") as? String {
+            addressTextField.text = x
+        }
+        
+        if let x = UserDefaults.standard.object(forKey: "description") as? String {
+            descriptionTextView.text = x
+        }
         
     }
     

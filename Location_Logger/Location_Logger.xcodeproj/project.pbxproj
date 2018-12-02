@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA59D9BB21B3A2AA0079929F /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59D9BA21B3A2AA0079929F /* ItemStore.swift */; };
+		DA59D9BD21B3A2D40079929F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59D9BC21B3A2D40079929F /* Item.swift */; };
+		DA59D9BF21B3ADD20079929F /* TableViewControllerOriginal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA59D9BE21B3ADD20079929F /* TableViewControllerOriginal.swift */; };
 		DA6955E121AF8E8700FFE84A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6955E021AF8E8700FFE84A /* AppDelegate.swift */; };
 		DA6955E621AF8E8700FFE84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6955E421AF8E8700FFE84A /* Main.storyboard */; };
 		DA6955E821AF8E8900FFE84A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6955E721AF8E8900FFE84A /* Assets.xcassets */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA59D9BA21B3A2AA0079929F /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		DA59D9BC21B3A2D40079929F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DA59D9BE21B3ADD20079929F /* TableViewControllerOriginal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerOriginal.swift; sourceTree = "<group>"; };
 		DA6955DD21AF8E8700FFE84A /* Location_Logger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Location_Logger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6955E021AF8E8700FFE84A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		DA6955E521AF8E8700FFE84A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,10 +91,13 @@
 		DA6955D421AF8E8700FFE84A = {
 			isa = PBXGroup;
 			children = (
+				DA59D9BE21B3ADD20079929F /* TableViewControllerOriginal.swift */,
 				DACBE2EC21B0A4300054B297 /* QuizViewController.swift */,
-				DACBE2EA21B08F220054B297 /* TableViewController.swift */,
+				DA59D9BA21B3A2AA0079929F /* ItemStore.swift */,
+				DA59D9BC21B3A2D40079929F /* Item.swift */,
 				DACBE2E821B08DAA0054B297 /* LocationInfoViewController.swift */,
 				DACBE2D821AFA47A0054B297 /* MapViewController.swift */,
+				DACBE2EA21B08F220054B297 /* TableViewController.swift */,
 				DACBE2DA21AFBB510054B297 /* NavigationBar.swift */,
 				DA6955DF21AF8E8700FFE84A /* Location_Logger */,
 				DA6955F421AF8E8900FFE84A /* Location_LoggerTests */,
@@ -275,7 +284,10 @@
 				DACBE2D921AFA47A0054B297 /* MapViewController.swift in Sources */,
 				DA6955E121AF8E8700FFE84A /* AppDelegate.swift in Sources */,
 				DACBE2ED21B0A4300054B297 /* QuizViewController.swift in Sources */,
+				DA59D9BF21B3ADD20079929F /* TableViewControllerOriginal.swift in Sources */,
+				DA59D9BD21B3A2D40079929F /* Item.swift in Sources */,
 				DACBE2EB21B08F220054B297 /* TableViewController.swift in Sources */,
+				DA59D9BB21B3A2AA0079929F /* ItemStore.swift in Sources */,
 				DACBE2DB21AFBB510054B297 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

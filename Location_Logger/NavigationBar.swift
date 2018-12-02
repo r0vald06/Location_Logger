@@ -10,9 +10,20 @@ import UIKit
 
 class NavigationBar: UIViewController {
     
+    var itemStore: ItemStore!
+    
     @IBOutlet weak var trailingViewConst: NSLayoutConstraint!
     @IBOutlet weak var leadingViewConst: NSLayoutConstraint!
     @IBOutlet weak var ubeView: UIView!
+
+    @IBAction func locationButton(_ sender: Any) {
+        performSegue(withIdentifier: "locationTable", sender: self)
+    }
+    
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        let nextTableViewController = segue.destination as! TableViewController
+        nextTableViewController.itemStore = itemStore
+    }
     
     var navButtonVisible = false;
     
@@ -80,7 +91,6 @@ extension UINavigationController {
             return super.supportedInterfaceOrientations
         }
     }
-
 }
 
 

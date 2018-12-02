@@ -1,8 +1,8 @@
 //
 //  ItemStore.swift
-//  Homepwner
+//  Location_Logger
 //
-//  Created by raudel Valdes on 11/23/18.
+//  Created by raudel Valdes on 12/2/18.
 //  Copyright © 2018 Raudel Valdes. All rights reserved.
 //
 
@@ -12,7 +12,10 @@ class ItemStore {
     
     var allItems = [Item]()
     
-    @discardableResult func createItem()  -> Item  {
+    @discardableResult func createItem()  -> Item  { //Apply @discardableResult to a function or method
+                                                    //declaration to suppress the compiler warning
+                                                    //when the function or method that returns a value
+                                                    //is called without using its result.
         let newItem = Item(random: true)
         
         allItems.append(newItem)
@@ -37,4 +40,3 @@ class ItemStore {
         allItems.insert(movedItem, at: toIndex)
     }
 }
-

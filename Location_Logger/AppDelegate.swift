@@ -12,11 +12,26 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let itemStore = ItemStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.    
+        // Override point for customization after application launch.
         
+        let navController = window!.rootViewController as! UINavigationController
+        let itemsController = navController.topViewController as! NavigationBar
+        itemsController.itemStore = itemStore
+        
+//        let itemsController = window!.rootViewController as! NavigationBar
+//        itemsController.itemStore = itemStore
+
+//        //THIS WORKS BUT ONLY IF TABLEVIEWCONTROLLER IS THE ROOTVIEWCONTROLLER
+//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = mainStoryboard.instantiateViewController(withIdentifier: "TableViewController") as! TableViewController
+//        self.window?.rootViewController = viewController
+//        viewController.itemStore = itemStore
+        
+        
+
         return true
     }
 
