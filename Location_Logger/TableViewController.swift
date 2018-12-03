@@ -10,6 +10,7 @@ import UIKit
 
 class TableViewController: UITableViewController {
     
+    var sendIndex = 0
     var itemStore: ItemStore!
     
     override func viewDidLoad() {
@@ -31,8 +32,9 @@ class TableViewController: UITableViewController {
         }
     }
     
-    
     @IBAction func addNewItem(_ sender: UIButton) {
+        performSegue(withIdentifier: "locationInfo", sender: self)
+        
         // Create a new item and add it to the store
         let newItem = itemStore.createItem()
         // Figure out where that item is in the array
@@ -41,6 +43,13 @@ class TableViewController: UITableViewController {
             // Insert this new row into the table
             tableView.insertRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    open override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        
+        let nextTableViewController = segue.destination as! LocationInfoViewController
+        nextTableViewController.itemStore = itemStore
+        nextTableViewController.itemToUpdate = sendIndex
     }
     
     override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
@@ -67,10 +76,10 @@ class TableViewController: UITableViewController {
             let deleteAction = UIAlertAction(title: "Remove", style: .destructive,
                                              handler: { (action) -> Void in
                                                 
-                                                // Remove the item from the store
-                                                self.itemStore.removeItem(item)
-                                                // Also remove that row from the table view with an animation
-                                                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+                // Remove the item from the store
+                self.itemStore.removeItem(item)
+                // Also remove that row from the table view with an animation
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
                                                 
             })
             ac.addAction(deleteAction)
@@ -112,7 +121,14 @@ class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let valueToSend = itemStore.allItems[indexPath.row]
+        let itemIndex = itemStore.allItems.index(of: valueToSend)
+        print("send value: ")
+        print(itemIndex!)
+        print("value sent!")
+        
+        sendIndex = itemIndex!
+        //UserDefaults.standard.set(itemIndex, forKey: "itemToUpdate")
         performSegue(withIdentifier: "locationInfo", sender: self)
     }
-    
 }

@@ -39,4 +39,10 @@ class ItemStore {
         // Insert item in array at new location
         allItems.insert(movedItem, at: toIndex)
     }
+    
+//    func updateItem(_ item: Item, ){
+//        self.removeItem(<#T##item: Item##Item#>)
+//        self.createItem()
+//        self.moveItem(from: <#T##Int#>, to: <#T##Int#>)
+//    }
 }

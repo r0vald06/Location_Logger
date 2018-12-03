@@ -18,8 +18,16 @@ class LocationInfoViewController: UIViewController, UITextViewDelegate, UITextFi
     @IBOutlet weak var locationMapView: MKMapView!
     var titleString=""
     
+    var itemToUpdate = 0
+    var itemStore: ItemStore!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("update this item")
+        print(itemToUpdate)
+        print("this item update")
+        
         //Do any additional setup after loading the view, typically from a nib
         self.titleTextField.delegate = self
         self.dateTextField.delegate = self
@@ -45,6 +53,7 @@ class LocationInfoViewController: UIViewController, UITextViewDelegate, UITextFi
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
         if let x = UserDefaults.standard.object(forKey: "title") as? String {
             titleTextField.text = x
         }
@@ -59,6 +68,21 @@ class LocationInfoViewController: UIViewController, UITextViewDelegate, UITextFi
         
         if let x = UserDefaults.standard.object(forKey: "description") as? String {
             descriptionTextView.text = x
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated);
+        if self.isMovingFromParent
+        {
+
+//            itemStore.updateItem(<#T##item: Item##Item#>)
+        }
+        if self.isBeingDismissed
+        {
+            
+            //Dismissed
         }
     }
 

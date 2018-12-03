@@ -26,16 +26,18 @@ class Item: NSObject {
     
     convenience init(random: Bool = false) {
         if random {
-            let adjectives = ["Fluffy", "Rusty", "Shiny"]
-            let nouns = ["Bear", "Spork", "Mac"]
+            //let adjectives = ["Fluffy", "Rusty", "Shiny"]
+            //let nouns = ["Bear", "Spork", "Mac"]
             
-            var idx = arc4random_uniform(UInt32(adjectives.count))//getting random number within the size of the array
-            let randomAdjective = adjectives[Int(idx)] //choosing random adjective
+            //var idx = arc4random_uniform(UInt32(adjectives.count))//getting random number within the size of the array
+            //let randomAdjective = adjectives[Int(idx)] //choosing random adjective
             
-            idx = arc4random_uniform(UInt32(nouns.count))//getting random number within the size of the array
-            let randomNoun = nouns[Int(idx)] //choosing random noun
+            //idx = arc4random_uniform(UInt32(nouns.count))//getting random number within the size of the array
+            //let randomNoun = nouns[Int(idx)] //choosing random noun
             
-            let randomName = "\(randomAdjective) \(randomNoun)" //combining the adjective and noun to make a name
+            //let randomName = "\(randomAdjective) \(randomNoun)" //combining the adjective and noun to make a name
+            let randomName = UserDefaults.standard.object(forKey: "title") as! String
+            
             let randomValue = Int(arc4random_uniform(100)) // getting a random number from 0 to 100
             let randomSerialNumber =
                 UUID().uuidString.components(separatedBy: "-").first! //creating a serial number?

@@ -14,30 +14,30 @@
         <scene sceneID="kE3-9r-ytR">
             <objects>
                 <viewController storyboardIdentifier="LocationInfoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nb3-Gl-Ptz" customClass="LocationInfoViewController" customModule="Location_Logger" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Jro-jo-3Iw">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="LocationInfoViewController" id="Jro-jo-3Iw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ozw-Dx-qpp">
-                                <rect key="frame" x="20" y="107" width="43" height="24"/>
+                                <rect key="frame" x="20" y="63" width="43" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3k-Nq-Ef0">
-                                <rect key="frame" x="20" y="142" width="47" height="24"/>
+                                <rect key="frame" x="20" y="98" width="47" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaE-h0-cky">
-                                <rect key="frame" x="20" y="263" width="106" height="24"/>
+                                <rect key="frame" x="20" y="219" width="106" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="omb-6r-VWg">
-                                <rect key="frame" x="20" y="295" width="374" height="241"/>
+                                <rect key="frame" x="20" y="251" width="374" height="241"/>
                                 <color key="backgroundColor" white="0.81416773687214605" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="241" id="JhX-jl-x4W"/>
@@ -47,34 +47,34 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Egy-OP-R51">
-                                <rect key="frame" x="75" y="98" width="319" height="30"/>
+                                <rect key="frame" x="75" y="54" width="319" height="30"/>
                                 <color key="backgroundColor" red="0.81568627450980391" green="0.81566649675369263" blue="0.81429609125607638" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Cp-QH-P32">
-                                <rect key="frame" x="75" y="136" width="319" height="30"/>
+                                <rect key="frame" x="75" y="92" width="319" height="30"/>
                                 <color key="backgroundColor" red="0.81568627450980391" green="0.81566649675369263" blue="0.81568735837936401" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8V-1Y-d3G">
-                                <rect key="frame" x="106" y="174" width="288" height="30"/>
+                                <rect key="frame" x="106" y="130" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.81569737195968628" green="0.81566649675369263" blue="0.81568735837936401" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSH-dx-9tD">
-                                <rect key="frame" x="20" y="180" width="78" height="24"/>
+                                <rect key="frame" x="20" y="136" width="78" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RYU-h0-oI5">
-                                <rect key="frame" x="20" y="578" width="374" height="223"/>
+                                <rect key="frame" x="20" y="534" width="374" height="267"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -118,11 +118,12 @@
                         <outlet property="descriptionTextView" destination="omb-6r-VWg" id="AYO-1m-gkj"/>
                         <outlet property="locationMapView" destination="RYU-h0-oI5" id="iWj-ms-l1G"/>
                         <outlet property="titleTextField" destination="Egy-OP-R51" id="vrp-MS-fWe"/>
+                        <segue destination="521-s0-sfi" kind="show" identifier="backToTable" id="qBA-B2-MgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaF-xD-hdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2650.7246376811595" y="588.61607142857144"/>
+            <point key="canvasLocation" x="2681" y="589"/>
         </scene>
         <!--Quiz View Controller-->
         <scene sceneID="VIw-h1-Wvv">
@@ -131,13 +132,19 @@
                     <view key="view" contentMode="scaleToFill" id="pK6-HZ-ZRu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgC-MR-krt">
+                                <rect key="frame" x="20" y="50" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kOA-Cc-pBk"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vQX-o6-rnD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="1318"/>
+            <point key="canvasLocation" x="1724.6376811594205" y="1317.8571428571429"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="EVM-Kv-dy8">
@@ -163,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jX0-j2-bQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1725" y="-78"/>
+            <point key="canvasLocation" x="1725" y="-157"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b8O-m8-Btw">
@@ -315,9 +322,6 @@
                                 <accessibility key="accessibilityConfiguration" identifier="UITableViewCell">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
-                                <connections>
-                                    <segue destination="nb3-Gl-Ptz" kind="show" identifier="locationInfo" id="bLp-bk-4c4"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -325,6 +329,9 @@
                             <outlet property="delegate" destination="521-s0-sfi" id="9pM-VT-0iT"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="nb3-Gl-Ptz" kind="show" identifier="locationInfo" id="Yac-pu-l8c"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VLn-Me-MW2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="z6K-Tg-YEW" userLabel="Exit" sceneMemberID="exit"/>
@@ -335,4 +342,8 @@
     <resources>
         <image name="hamburger_menue_icon_1x" width="75" height="75"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Yac-pu-l8c"/>
+        <segue reference="qBA-B2-MgF"/>
+    </inferredMetricsTieBreakers>
 </document>
